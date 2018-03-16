@@ -24,6 +24,14 @@ header {
     overflow-y: scroll;
 }
 
+.mainContentWelcomePage {
+    background: #fff;
+    height: 790px;
+    margin-right: 20px;
+    border: 1px solid #e3e4e8;
+    border-radius: 1px;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -55,11 +63,11 @@ header {
 }
 
 .boxThree {
-    min-height: auto;
+    min-height: unset;
     margin-bottom: 0px;
 }
 
-.buttonAcronyms, .buttonSGE, .buttonTalents, .buttonRotPrio, .buttonLegendaries, .buttonGear, .buttonTrinkets, .buttonWeakauras {
+.buttonAcronyms, .buttonSGE, .buttonTalents, .buttonRotPrio, .buttonLegendaries, .buttonGear, .buttonTrinkets, .buttonWeakauras{
     width: 100%;
     -webkit-transition: all .2s;
     line-height: 40px;
@@ -71,3 +79,14 @@ header {
 background: #3CB371;
 }
 
+/*.BM, .MM, .SV{*/
+    /*width: 100%;*/
+    /*-webkit-transition: all .2s;*/
+    /*line-height: 40px;*/
+    /*cursor: pointer;*/
+    /*padding-left: 10px;*/
+/*}*/
+
+/*.BM:hover, .MM:hover, .SV:hover{*/
+/*background: #3CB371;*/
+/*}*/

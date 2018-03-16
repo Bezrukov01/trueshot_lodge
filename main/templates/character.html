@@ -12,13 +12,17 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
     <script src="js/bootstrap.min.js"></script>
+
+    ## Глобально, я не очень разобрался с преходами, пробовал менять названия кнопок BM MM SV
+
+
 </head>
 # Дизайн переделывай как хочешь, у меня просто из-за военкомата не было времени на это всё, если будут какие-то вопросы, кидай, переделаю бэк-енд под дизайн
 <body>
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg-1"><img src="{% static 'img/new_logo.png' %}" alt="icon" class="logo"></div>
+                <div class="col-lg-1"><a href="{% url 'main:home' %}"><img src="{% static 'img/new_logo.png' %}" alt="icon" class="logo"></a></div>
             </div>
         </div>
     </header>
@@ -26,6 +30,7 @@
         <div class="row">
             <div class="col-lg-9 col-md-6">
 			# Тут тебе надо наделать div для всех пунктов (Акронимы, таланты и тд, для каждого свой див и с помощью ajax динамично их менять)
+                ## Тут их надо было делать ради аджакса или почему? давай пока сделаем без аджакса, а его если что уже потом подкрутим
                 <div class="mainContent">
                     {{ character.description }}
                 </div>
@@ -33,13 +38,19 @@
             <div class="col-lg-3 col-md-6">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="boxOneButtons">
-                            <div class="buttonBM"> Beast Mastery </div>
+                        <div class="boxOne">
+                            ## Вот тут по хорошему надо сделать так чтобы кнопки были справа от пикчи хантера, и надо сделать их как остальные кнопки (как у акронимов и т.д.)
+                            <div class="boxOneButtons">
+                                <img src="{% static 'img/logo100x100hunter.png' %}" alt="hunterLogo" class="">
+                                <a href="{% url 'main:character' name='BM' %}" style="margin-right: 8rem;">Beast Mastery</a>
+                                <a href="{% url 'main:character' name='MM' %}" style="margin-right: 8rem;">Marksmanship</a>
+                                <a href="{% url 'main:character' name='SV' %}" style="margin-right: 8rem;">Survival</a>
+                            </div>
                         </div>
-                        <div class="boxOne"><img src="{% static 'img/logo100x100hunter.png' %}" alt="hunterLogo" class=""></div>
                     </div>
                     <div class="col-lg-12">
 					# С иконкой я хз что, он их спокойно сохраняет, но при этом не подгружает, в общем разберусь
+                    ## Здесь иконка по факту и не нужна, по крайней мере сейчас думаю можно забить
                         <div class="boxTwo">
                             {% if character.icon  %}
                             <img src="{{ character.icon }}" alt="{{ character.name }} icon">
@@ -47,6 +58,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
+                        #завтра сделаю здесь все кликабельным и пропишу все ссылки
                         <div class="boxThree">
                             <div class="boxThreeButtons">
                             <div class="buttonAcronyms"> Acronyms </div>
