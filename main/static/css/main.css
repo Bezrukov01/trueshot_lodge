@@ -1,0 +1,73 @@
+body {
+    background: #edeef0;
+}
+
+.logo {
+    max-width: 100%;
+    height: 40px;
+}
+header {
+    width: 100%;
+    min-height: 50px;
+    background: #2e8b57;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #297a4d;
+    padding-top: 5px;
+}
+
+.mainContent {
+    background: #fff;
+    height: 790px;
+    margin-right: 20px;
+    border: 1px solid #e3e4e8;
+    border-radius: 1px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: #a6a6a6;
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.7);
+}
+
+.boxOne, .boxTwo, .boxThree {
+    background: #fff;
+    width: 100%;
+    border: 1px solid #e3e4e8;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.boxOne {
+    min-height: 100px;
+}
+
+.boxTwo {
+    min-height: 250px;
+}
+
+.boxThree {
+    min-height: auto;
+    margin-bottom: 0px;
+}
+
+.buttonAcronyms, .buttonSGE, .buttonTalents, .buttonRotPrio, .buttonLegendaries, .buttonGear, .buttonTrinkets, .buttonWeakauras {
+    width: 100%;
+    -webkit-transition: all .2s;
+    line-height: 40px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.buttonAcronyms:hover, .buttonSGE:hover, .buttonTalents:hover, .buttonRotPrio:hover, .buttonLegendaries:hover, .buttonGear:hover, .buttonTrinkets:hover, .buttonWeakauras:hover{
+background: #3CB371;
+}
+
