@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src= {% static "js/bootstrap.min.js" %}></script>
 </head>
 <body>
 
@@ -34,16 +35,24 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="boxOne">
-                            <img src="{% static 'img/logo100x100hunter.png' %}" alt="hunterLogo" class="">
-                            <div class="boxOneButtons">
-                                <a href="{% url 'main:character' name='BM' %}" style="margin-right: 8rem;">Beast Mastery</a>
-                                <a href="{% url 'main:character' name='MM' %}" style="margin-right: 8rem;">Marksmanship</a>
-                                <a href="{% url 'main:character' name='SV' %}" style="margin-right: 8rem;">Survival</a>
+                            <div class="row">
+                            <img src="{% static 'img/logo100x100hunter.png' %}" alt="hunterLogo" class="col-lg-5 va" style="padding-left: 15px; padding-right: 0px">
+                            <div class="boxOneButtons col-lg-7" style="padding-left: 0px; padding-right: 0px">
+{#                                <a href="{% url 'main:character' name='BM' %}" style="margin-right: 8rem;">Beast Mastery</a>#}
+{#                                <a href="{% url 'main:character' name='MM' %}" style="margin-right: 8rem;">Marksmanship</a>#}
+{#                                <a href="{% url 'main:character' name='SV' %}" style="margin-right: 8rem;">Survival</a>#}
+                            <ul>
+                                <li> <button class="myCustom"><a href="{% url 'main:character' name='BM' %}">Beast Mastery</a></button></li>
+                                <li> <button class="myCustom"><a href="{% url 'main:character' name='MM' %}">Marksmanship</a></button></li>
+                                <li> <button class="myCustom"><a href="{% url 'main:character' name='SV' %}">Survival</a></button></li>
+                            </ul>
                             </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="boxTwo">
                         </div>
+                        <div class="row">
+                    <div class="col-lg-12">
+                        <div class="boxTwo"></div>
+                    </div>
                     </div>
                     </div>
                 </div>

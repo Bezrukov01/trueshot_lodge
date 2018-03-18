@@ -1,5 +1,16 @@
 body {
     background: #edeef0;
+    overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
 }
 
 .logo {
@@ -55,16 +66,20 @@ header {
 }
 
 .boxOne {
-    min-height: 100px;
+    padding-left: 0px;
+    min-height: 93px;
+    width: 100%;
 }
 
 .boxTwo {
     min-height: 250px;
+    width: 100%;
 }
 
 .boxThree {
     min-height: unset;
     margin-bottom: 0px;
+    width: 100%;
 }
 
 .buttonAcronyms, .buttonSGE, .buttonTalents, .buttonRotPrio, .buttonLegendaries, .buttonGear, .buttonTrinkets, .buttonWeakauras{
@@ -79,6 +94,38 @@ header {
 background: #3CB371;
 }
 
+.va {
+  vertical-align: baseline;
+    padding-left: 0px;
+}
+
+.boxOneButtons {
+  display : inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.boxOneButtons ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-right: 8px;
+}
+
+.myCustom {
+  background: none;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  width: 100%;
+  -webkit-transition: all .2s;
+  cursor: pointer;
+  margin-top: 10px;
+
+}
+
+.myCustom:hover {
+  background: #3CB371;
+  border: 2px solid rgb(162,163,172);
+}
 /*.BM, .MM, .SV{*/
     /*width: 100%;*/
     /*-webkit-transition: all .2s;*/

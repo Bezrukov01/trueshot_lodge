@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
-    <script src="js/bootstrap.min.js"></script>
 
-    ## Глобально, я не очень разобрался с преходами, пробовал менять названия кнопок BM MM SV
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src= {% static "js/bootstrap.min.js" %}></script>
 
 
 </head>
-# Дизайн переделывай как хочешь, у меня просто из-за военкомата не было времени на это всё, если будут какие-то вопросы, кидай, переделаю бэк-енд под дизайн
-<body>
+{## Дизайн переделывай как хочешь, у меня просто из-за военкомата не было времени на это всё, если будут какие-то вопросы, кидай, переделаю бэк-енд под дизайн#}
+<body style="overflow: hidden">
     <header>
         <div class="container">
             <div class="row">
@@ -29,8 +29,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9 col-md-6">
-			# Тут тебе надо наделать div для всех пунктов (Акронимы, таланты и тд, для каждого свой див и с помощью ajax динамично их менять)
-                ## Тут их надо было делать ради аджакса или почему? давай пока сделаем без аджакса, а его если что уже потом подкрутим
+{#			# Тут тебе надо наделать div для всех пунктов (Акронимы, таланты и тд, для каждого свой див и с помощью ajax динамично их менять)#}
                 <div class="mainContent">
                     {{ character.description }}
                 </div>
@@ -39,42 +38,47 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="boxOne">
-                            ## Вот тут по хорошему надо сделать так чтобы кнопки были справа от пикчи хантера, и надо сделать их как остальные кнопки (как у акронимов и т.д.)
-                            <div class="boxOneButtons">
-                                <img src="{% static 'img/logo100x100hunter.png' %}" alt="hunterLogo" class="">
-                                <a href="{% url 'main:character' name='BM' %}" style="margin-right: 8rem;">Beast Mastery</a>
-                                <a href="{% url 'main:character' name='MM' %}" style="margin-right: 8rem;">Marksmanship</a>
-                                <a href="{% url 'main:character' name='SV' %}" style="margin-right: 8rem;">Survival</a>
+                            <div class="row">
+                                <img src="{% static 'img/logo100x100hunter.png' %}" alt="hunterLogo" class="col-lg-5 va" style="padding-left: 15px; padding-right: 0px">
+                                <div class="boxOneButtons col-lg-7" style="padding-left: 0px; padding-right: 0px">
+{#                                <a href="{% url 'main:character' name='BM' %}" style="margin-right: 8rem;">Beast Mastery</a>#}
+{#                                <a href="{% url 'main:character' name='MM' %}" style="margin-right: 8rem;">Marksmanship</a>#}
+{#                                <a href="{% url 'main:character' name='SV' %}" style="margin-right: 8rem;">Survival</a>#}
+                                    <ul>
+                                        <li> <button class="myCustom"><a href="{% url 'main:character' name='BM' %}">Beast Mastery</a></button></li>
+                                        <li> <button class="myCustom"><a href="{% url 'main:character' name='MM' %}">Marksmanship</a></button></li>
+                                        <li> <button class="myCustom"><a href="{% url 'main:character' name='SV' %}">Survival</a></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="boxTwo"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12">
-					# С иконкой я хз что, он их спокойно сохраняет, но при этом не подгружает, в общем разберусь
-                    ## Здесь иконка по факту и не нужна, по крайней мере сейчас думаю можно забить
-                        <div class="boxTwo">
-                            {% if character.icon  %}
-                            <img src="{{ character.icon }}" alt="{{ character.name }} icon">
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        #завтра сделаю здесь все кликабельным и пропишу все ссылки
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+{#                     #завтра сделаю здесь все кликабельным и пропишу все ссылки#}
                         <div class="boxThree">
                             <div class="boxThreeButtons">
-                            <div class="buttonAcronyms"> Acronyms </div>
-                            <div class="buttonSGE"> Stats, Gems, and Enchants </div>
-                            <div class="buttonTalents"> Talents </div>
-                            <div class="buttonRotPrio"> Rotation/Priority </div>
-                            <div class="buttonLegendaries"> Legendaries </div>
-                            <div class="buttonGear"> Gear </div>
-                            <div class="buttonTrinkets"> Trinkets </div>
-                            <div class="buttonWeakauras"> WeakAuras </div>
+                                <div class="buttonAcronyms"> Acronyms </div>
+                                <div class="buttonSGE"> Stats, Gems, and Enchants </div>
+                                <div class="buttonTalents"> Talents </div>
+                                <div class="buttonRotPrio"> Rotation/Priority </div>
+                                <div class="buttonLegendaries"> Legendaries </div>
+                                <div class="buttonGear"> Gear </div>
+                                <div class="buttonTrinkets"> Trinkets </div>
+                                <div class="buttonWeakauras"> WeakAuras </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 </html>
